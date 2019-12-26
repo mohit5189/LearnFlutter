@@ -8,9 +8,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final wordPair = WordPair.random();
     return MaterialApp (
-      title: "Startup Name Generator",
+        debugShowCheckedModeBanner: false,
+      title: "List",
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.red,
       ),
       home: RandomWords()
     );
@@ -26,7 +27,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('List'),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved)
         ],
